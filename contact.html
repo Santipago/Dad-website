@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sanago Landscaping</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <img class= "logo" src="images/logo w: name.png"  alt="logo" height="300">
+
+        <nav> <!--nav can be navigation element in html-->
+            <ul class="nav__links">
+
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a>Services</a>
+                    
+                    <div class="dropdown-content">
+                        <a href="grading.html">Grading</a>
+                        <a href="sod.html">Sod</a>
+                        <a href="fences.html">Fences</a>
+                        <a href="decks.html">Decks</a>
+                        <a href="steps&p.html">Steps and Pathways</a>
+                    </div>
+                </li>
+                <li><a href="portfolio.html">Portofolio</a></li>
+                <li><a class="cta-button" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+<div class= "contactContent">
+    <div class = "checkList">
+        <h1>Services:</h1>
+        <p1>Please select one or more service(s)</p1><br><br>
+        <input type = "checkbox" id = "finalGrad">
+        <label for = "finalGrad">Final Grading</label><br>
+        <input type = "checkbox" id = "sod">
+        <label for = "sod">Sod</label><br>
+        <input type = "checkbox" id = "fence">
+        <label for = "fence">Fence</label><br>
+        <input type = "checkbox" id = "deck">
+        <label for = "deck">Deck</label><br>
+        <input type = "checkbox" id = "snowremoval">
+        <label for = "snowremoval">Snow Removal</label><br>
+    </div>
+
+        <div class = "contactform">
+            <form action="https://formspree.io/f/mkgbpork" method="POST">
+                <h1 class ="form-header">Contact Form</h1>
+                <div class ="input-group">
+                    <input type="text" name="first" placeholder="Name" autocomplete="off" required>
+                    <input type="text" name="last" placeholder="Address" autocomplete="off" required>
+                    <input type="email" name="email" placeholder="Email Address" autocomplete="off" required>
+                    <input type="phone_num" name="phone_num" placeholder="Phone Number" autocomplete="off" required>
+                    <textarea class = "textarea" rows ="5" cols="60" name="message" placeholder="Enter Text" autocomplete="off"required></textarea>
+                </div><br>
+
+                <div class="g-recaptcha" data-sitekey="6LfBnHAsAAAAAGRzuecB15bzw_Z3HfMF-dk-59aM"></div><br>
+            
+                <button class = "cta-button" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>Contact information:</p>
+        <p>780-729-3117</p>
+        <p>Sanagolawncare2016@gmail.com</p>
+    </footer>
+    <script src = "contact.js"></script>
+</body>
+</html>

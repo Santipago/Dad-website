@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap'); /*pulled from google fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap');
+
+*
+{
+    box-sizing: border-box; /*creates a box*/
+    margin: 0;
+    padding: 0; /*the space between an element's border and the element's content*/
+    font-family: "Zalando Sans", sans-serif;/* Ensure consistent font-family */
+    font-weight:500;
+}
+
+html, body 
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #e5ffe0;
+}
+
+/*There are multiple because it applies to more than one thing*/
+li, a, button
+{
+    color: black;
+    text-decoration: none; /*removes any underlines from links*/ 
+}
+
+header 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 150px;
+    border: 4px solid blue;
+}
+
+
+.logo{
+    height: 100%;
+    border: 4px solid red;
+}
+
+.sidebar{
+    display: none;
+}
+
+
+.nav__links
+{
+    list-style: none;
+    font-size: 1rem;
+    margin-right: 100px;
+}
+
+.nav__links li{
+    list-style: none;
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.nav__links li a
+{
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover
+{
+    color: aqua;
+}
+
+
+
+.cta-button{
+    padding: 17px 20px;
+    background-color: lightskyblue;
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+    height: 55px;
+}
+
+.cta-button:hover{
+    background-color: lightblue;
+}
+
+
+
+
+.home-text{
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.home-text h1{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.home-text p1{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.mainpage_banner{
+    position: relative;
+}
+
+.mainpage_banner img{
+    width: 100%;
+    height: 100%;
+
+    min-height: 100px;
+    min-width: 100px;
+
+    opacity: 0.8;
+    filter:brightness(0.7)
+}
+.mainpage_banner-text{
+    position: absolute;
+    top: 5%;
+}
+.mainpage_banner h1{
+    padding: 20px;
+    font-size: 6rem;
+    color: rgb(97, 200, 125)
+}
+
+.mainpage_banner h4{
+    padding: 20px;
+    font-size: 3rem;
+    color: rgb(97, 200, 125)
+}
+
+
+
+
+.dropdown{
+    display: inline-block;
+    /* position: relative; */
+}
+
+ /*This adjusts the actual box*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    box-shadow: 0px 8px 16px;
+    z-index: 1; /*makes sure that it shows above the image in the main screen*/
+    min-width: 150px;
+    min-height: 150px;
+  }
+
+
+
+ .dropdown-content a {
+    margin: 0;
+    color: black;
+    display: block;
+    text-decoration: none;
+    padding: 15px 15px;
+    max-height: 100px;
+  }
+
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.servicesContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 60px;
+}
+
+.servicesText{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.servicesText h1{
+    margin-bottom: 25px;
+}
+
+.servicesDesc{
+    max-width: 30%;
+}
+
+.servicesDesc{
+    font-size: 1rem;
+}
+
+.servicesDesc p{
+    margin-bottom: 25px;
+}
+
+.imageSlider{
+    position: relative; 
+    height: 550px;
+    width: 600px;
+}
+
+.imageSlider img{
+    position: absolute; /*Have as child in order to move within the parent*/
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.mySlides{
+    display: none;
+}
+
+/*Code for the left and right arrows for image slider*/
+.prev, .next{
+    cursor: pointer;  
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    font-size: 2rem;
+    padding: 20px;
+    height: 80px;
+    transition: 0.6s ease;
+    border: none;
+    user-select : none;
+}
+
+.prev{
+    left: 0;
+    margin-left: 0;
+}
+
+.next{
+    right: 0;
+    margin-right: 0;
+}
+
+.prev:hover, .next:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade{
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+
+/*Portfolio Page*/
+
+.text-header{
+    padding: 20px;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;   
+
+    /* text-decoration: underline; */
+}
+
+.services_text img{
+    height: auto;
+    width: 300px;
+}
+
+/** For the gallery grid
+* We are using grid to organize the photos in the portfolio
+*/
+.gallery
+{
+    display: grid;
+    grid-template-rows: repeat(6, 150px);
+    grid-template-columns: repeat(6, 150px);
+    gap: 100px; /* Adds space between the images */
+    /* border: 4px solid black; */
+
+    max-height: 800px;
+    padding-left: 35px;
+    margin-top: 40px;
+}
+
+/*To be applied to every image*/
+.gallery img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* border: 4px solid red; */
+}
+
+.item-1
+{
+    grid-row: 1/3;
+    grid-column: 1/3;
+}
+
+.item-2
+{
+    grid-row: 1/3;
+    grid-column: 3/5;
+}
+
+.item-3
+{
+    grid-row: 1/3;
+    grid-column: 5/7;
+}
+
+.item-4
+{
+    grid-row: 3/5;
+    grid-column: 1/3;
+}
+
+.item-5
+{
+    grid-row: 3/5;
+    grid-column: 3/5;
+}
+
+.item-6
+{
+    grid-row: 3/5;
+    grid-column: 5/7;
+}
+
+
+/*CONTACT PAGE*/
+
+.contactContent{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 20px;
+    gap:2em;
+}
+
+.input-group{
+    display: grid;
+    grid-template-columns: repeat(2, 425px);
+    row-gap: 15px;
+}
+
+.input-group input 
+{
+    width:400px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+.serviceSubmit
+{
+    padding: 15px 20px;
+    background-color: lightskyblue;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    max-width: 100px;
+}
+
+.serviceSubmit:hover
+{
+    background-color: lightblue;
+}
+
+
+footer
+{
+    background-color: palegreen;
+    padding: 40px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+footer p
+{
+    margin-bottom: 10px;
+}
+
+
+
+@media (max-width: 955px){
+
+    header{
+        justify-content: center;
+        position: relative;
+    }
+
+
+     .logo{
+       order: 2;
+       border: 4px solid red;
+    }
+
+   .sidebar{
+        display: block;
+        position: absolute;
+        left:0;
+        
+    }
+
+    .sidebar-content {
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    z-index: 1;
+    max-width: 175px;
+    min-height: 275px;
+  }
+
+    .sidebar-content a{
+    font-size: 2em;
+    padding: 5px 10px; 
+  }
+
+  .sidebar a:hover{
+    cursor: pointer;
+    border: 2px solid black;
+  }
+
+
+
+  .mainpage_banner h1{
+    padding: 20px;
+    font-size: 4rem;
+    color: rgb(97, 200, 125)
+}
+
+.mainpage_banner h4{
+    padding: 20px;
+    font-size: 2rem;
+    color: rgb(97, 200, 125)
+}
+
+    .nav__links{
+        display: none;
+    }
+}
+
+@media (max-width: 624px){
+    .mainpage_banner h1{
+    font-size: 3rem;
+    }
+
+    .mainpage_banner h4{
+        font-size: 1.5rem;
+    }
+}
